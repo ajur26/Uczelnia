@@ -1,0 +1,62 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fdf6f8;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-image: url('pexels-sara-santos-381576-1020585.jpg');
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+header {
+    background-color: #ffb6c1;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    border: 3px solid #ff69b4;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    border: 3px solid #ffb6c1;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    background-color: #ffb6c1;
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+    border-top: 3px solid #ff69b4;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
