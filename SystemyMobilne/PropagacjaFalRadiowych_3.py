@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Parametry
 Gt = Gr = 1.6
 c = 299792458
 f1 = 900e6
@@ -25,11 +24,10 @@ def moc_dwutorowa(f, d, h1, h2, Gt=1.6, Gr=1.6):
     Pr = Pr0 * np.abs(1/d1 * np.exp(1j*phi1) - 1/d2 * np.exp(1j*phi2))**2
     return 10 * np.log10(Pr)
 
-# Odległości
+
 d_krotki = np.arange(1, 100.25, 0.25)
 d_dlugi = np.arange(1, 10001, 10)
 
-# Obliczenia dla każdej częstotliwości i zasięgu
 # f1 = 900 MHz
 friis_900_short = moc_friis(f1, d_krotki)
 dwutor_900_short = moc_dwutorowa(f1, d_krotki, h1, h2)

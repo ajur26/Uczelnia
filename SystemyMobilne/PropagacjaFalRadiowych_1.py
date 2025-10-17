@@ -21,38 +21,35 @@ P2_krotki = [liczSpadekMocy(f2, d) for d in d_krotki]
 P1_dlugi = [liczSpadekMocy(f1, d) for d in d_dlugi]
 P2_dlugi = [liczSpadekMocy(f2, d) for d in d_dlugi]
 
-#f1, krótki zasięg
-plt.figure(figsize=(8,5))
+plt.figure(figsize=(12, 10))
+
+plt.subplot(2, 2, 1)
 plt.plot(d_krotki, P1_krotki)
 plt.xlabel("Odległość d [m]")
 plt.ylabel("Spadek mocy [dB]")
 plt.title("f1 = 900 MHz, zasięg 1–100 m")
 plt.grid(True)
-plt.show()
 
-#f2, krótki zasięg
-plt.figure(figsize=(8,5))
+plt.subplot(2, 2, 2)
 plt.plot(d_krotki, P2_krotki)
 plt.xlabel("Odległość d [m]")
 plt.ylabel("Spadek mocy [dB]")
 plt.title("f2 = 2400 MHz, zasięg 1–100 m")
 plt.grid(True)
-plt.show()
 
-#f1, długi zasięg
-plt.figure(figsize=(8,5))
+plt.subplot(2, 2, 3)
 plt.plot(d_dlugi, P1_dlugi)
 plt.xlabel("Odległość d [m]")
 plt.ylabel("Spadek mocy [dB]")
 plt.title("f1 = 900 MHz, zasięg 1 m – 10 km")
 plt.grid(True)
-plt.show()
 
-#f2, długi zasięg
-plt.figure(figsize=(8,5))
+plt.subplot(2, 2, 4)
 plt.plot(d_dlugi, P2_dlugi)
 plt.xlabel("Odległość d [m]")
 plt.ylabel("Spadek mocy [dB]")
 plt.title("f2 = 2400 MHz, zasięg 1 m – 10 km")
 plt.grid(True)
+
+plt.tight_layout()
 plt.show()
